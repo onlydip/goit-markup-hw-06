@@ -927,8 +927,7 @@ body {
 
 .portfolio-link {
   display: block;
-  transition: box-shadow var(--ms--cubic);
-  transition: transform var(--ms--cubic);
+  transition: box-shadow var(--ms--cubic), transform var(--ms--cubic);
 }
 
 .portfolio-link:hover,
