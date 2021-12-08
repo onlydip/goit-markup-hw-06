@@ -409,12 +409,11 @@
             </li>
           </ul>
         </div>
-        <div class="logo-adress-social">
+        <div class="modal-adress-social">
           <p class="footer-social-title">Подпишитесь на рассылку</p>
           <form action="#" class="modal-form">
             <div class="modal-form-field-email">
-              <label for="user-email" class="modal-input-text-email"></label>
-              <div class="modal-input-wrap-email">
+              <label for="user-email" class="modal-input-text-email">
                 <input
                   type="email"
                   name="user-email"
@@ -423,14 +422,13 @@
                   id="user-email"
                   required="required"
                 />
-                <div class="input-button">
-                  <button type="submit" class="hero-btn modal-btn">
-                    Подписаться<svg class="input-btn-icon" width="24" height="24">
-                      <use href="./images/icons.svg#icon-icon-send"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
+              </label>
+
+              <button type="submit" class="hero-btn-input modal-btn">
+                Подписаться<svg class="input-btn-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-icon-send"></use>
+                </svg>
+              </button>
             </div>
           </form>
         </div>
@@ -467,9 +465,9 @@
               <input
                 type="email"
                 required="required"
-                name="user-email"
+                name="user-email-field"
                 class="modal-input"
-                id="user-email"
+                id="user-email-field"
               />
               <svg class="input-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone-form"></use>
@@ -485,7 +483,6 @@
                 name="user-tel"
                 id="user-tel"
                 class="modal-input"
-                required
               />
               <svg class="input-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-email-form"></use>
@@ -517,7 +514,7 @@
                 </svg>
               </span>
               Соглашаюсь с рассылкой и принимаю
-              <p class="modal-important-text">Условия договора</p></label
+              <a href="#" class="modal-important-text">Условия договора</a></label
             >
           </div>
 

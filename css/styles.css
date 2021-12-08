@@ -103,7 +103,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-.mainsbtn {
+.mains-btn {
   font-family: inherit;
   border-radius: 4px;
   border: none;
@@ -130,6 +130,7 @@ body {
 .header-navigation {
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 .header-container {
   display: flex;
@@ -264,6 +265,62 @@ body {
 
 .hero-btn:hover,
 .hero-btn:focus {
+  background-color: var(--button-color);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hero {
+  background-color: var(--main-hero-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-style: inherit;
+  text-align: center;
+  max-height: 600px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero-item {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--main-title-color);
+  margin: auto;
+  display: block;
+  width: 696px;
+  margin-bottom: 30px;
+}
+.hero-btn-input {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: var(--main-title-color);
+  background: var(--main-button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  padding: 10px 28px 10px 29px;
+  display: block;
+  margin: auto;
+  min-width: 200px;
+  min-height: 50px;
+  transition: background-color var(--ms--cubic), border-radius var(--ms--cubic),
+    box-shadow var(--ms--cubic);
+}
+
+.hero-btn-input:hover,
+.hero-btn-input:focus {
   background-color: var(--button-color);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -600,11 +657,8 @@ body {
 .logo-adress-social {
   margin-left: 70px;
 }
-
-.input-button {
-  position: absolute;
-  left: 370px;
-  top: 0;
+.modal-adress-social {
+  margin-left: 93px;
 }
 .footer-social-item + .footer-social-item {
   margin-left: 10px;
@@ -677,8 +731,8 @@ body {
 }
 .modal-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
   background-color: transparent;
@@ -701,7 +755,7 @@ body {
 }
 
 .modal-form-field {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .modal-form-field-input {
   margin-bottom: 20px;
@@ -709,12 +763,10 @@ body {
 .modal-input-wrap {
   position: relative;
 }
-.modal-input-wrap-email {
-  position: relative;
+
+.modal-form-field-email {
+  display: flex;
 }
-/* .modal-form-field-email {
-  margin-bottom: 10px;
-} */
 .modal-input-text-email {
   /*   font-size: 12px;
   display: block;
@@ -753,6 +805,7 @@ body {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.6);
   transition: border-color var(--ms--cubic);
+  margin-right: 12px;
 }
 .modal-input-email:focus {
   border-color: var(--main-button-color);
@@ -777,6 +830,7 @@ body {
 
 .modal-text {
   width: 100%;
+  display: block;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -833,7 +887,6 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   justify-content: center;
-  margin-bottom: 30px;
 }
 .modal-check-text span {
   width: 16px;
@@ -859,14 +912,16 @@ body {
   fill: transparent;
 }
 
-.modal-check:checked + .modal-check-text span {
+.modal-check:checked + .modal-check-text span,
+.modal-check:focus + .modal-check-text span {
   background-color: var(--main-button-color);
   border: none;
 }
-
-.modal-check:checked + .modal-check-text .icon-check {
+.modal-check:checked + .modal-check-text .icon-check,
+.modal-check:focus + .modal-check-text .icon-check {
   fill: var(--main-title-color);
 }
+
 /* -------------PORTFOLIO*/
 .main-current {
   color: var(--main-title-color);
