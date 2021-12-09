@@ -178,7 +178,7 @@ body {
   background-color: var(--main-button-color);
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: -3px;
 }
 .header-mail {
   color: var(--first-text-color);
@@ -658,7 +658,7 @@ body {
   margin-left: 70px;
 }
 .modal-adress-social {
-  margin-left: 93px;
+  margin-left: auto;
 }
 .footer-social-item + .footer-social-item {
   margin-left: 10px;
@@ -709,7 +709,7 @@ body {
 
 .modal {
   width: 528px;
-  min-height: 581px;
+  height: 581px;
   background-color: #ffffff;
   border-radius: 5px;
   position: absolute;
@@ -755,6 +755,9 @@ body {
 }
 
 .modal-form-field {
+  margin-bottom: 10px;
+}
+.modal-form-checkbox {
   margin-bottom: 30px;
 }
 .modal-form-field-input {
@@ -911,17 +914,66 @@ body {
 .icon-check {
   fill: transparent;
 }
+.modal-check {
+  cursor: pointer;
+}
+.modal-check:focus + .modal-check-text .border-checkbox,
+.modal-check:hover + .modal-check-text .border-checkbox {
+  border-color: #2196f3;
+}
 
-.modal-check:checked + .modal-check-text span,
+.modal-check:checked + .modal-check-text .border-checkbox {
+  background-color: var(--main-button-color);
+  border: none;
+}
+.modal-check:checked:focus + .modal-check-text .icon-check {
+  fill: var(--main-title-color);
+}
+.modal-check-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.border-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--main-button-color);
+  border-radius: 2px;
+  margin-right: 8px;
+
+  transition: background-color 250ms var(--ms--cubic), border-color 250ms var(--ms--cubic);
+}
+/* .modal-policy-link {
+  color: var(--modal-policy-link);
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-skip-ink: none;
+  margin-left: 3px;
+} */
+/* .modal-check:checked + .modal-check-text span {
+  background-color: var(--main-button-color);
+  border: none;
+}
 .modal-check:focus + .modal-check-text span {
   background-color: var(--main-button-color);
   border: none;
 }
-.modal-check:checked + .modal-check-text .icon-check,
-.modal-check:focus + .modal-check-text .icon-check {
+
+.modal-check:checked + .modal-check-text .icon-check {
   fill: var(--main-title-color);
 }
-
+.modal-check:focus + .modal-check-text .icon-check {
+  fill: var(--main-title-color);
+} */
 /* -------------PORTFOLIO*/
 .main-current {
   color: var(--main-title-color);
